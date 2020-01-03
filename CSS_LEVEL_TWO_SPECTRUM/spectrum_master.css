@@ -1,0 +1,34 @@
+.first_table{
+    margin: auto;
+}
+
+h1{
+  font-family: 'Ma Shan Zheng', cursive;
+  text-align: center;
+}
+
+td{
+  width: 150px;
+  height: 300px;
+  border: solid 6px white;
+}
+
+#s_one{
+  background-color: #05668D;
+}
+
+#s_two{
+  background: #028090;
+}
+
+#s_three{
+  background: #00A896;
+}
+
+#s_four{
+  background: #02C39A;
+}
+
+#s_five{
+  background: #F0F3BD;
+}
