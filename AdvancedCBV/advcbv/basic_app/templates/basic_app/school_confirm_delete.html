@@ -1,0 +1,15 @@
+{% extends "basic_app/base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Delete Page</h1>
+  </div>
+  <h2>Are you sure you want to delete School <em>{{school.name}}</em> ?</h2>
+  <br>
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger mr-2" value="Delete">
+
+    <a href="{% url 'schooldetail' school.pk %}">Cancel</a>
+  </form>
+
+{% endblock %}

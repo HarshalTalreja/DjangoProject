@@ -7,15 +7,37 @@
     <title>Schools</title>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-static-top">
-      <ul class="nav navbar-nav">
-        <li><a class="navbar-brand" href="{% url 'list' %}">Schools</a></li>
-        <li><a class="navbar-link" href="{% url 'admin.index' %}">Admin</a></li>
-        <li><a href="#"></a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'homepage' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="{% url 'schoollist' %}">Schools</a>
+          <a class="nav-item nav-link" href="{% url 'studentlist' %}">Students</a>
+          <a class="nav-item nav-link" href="{% url 'admin:index' %}">Django Admin</a>
+          <a class="nav-item nav-link" href="{% url 'create' %}">Create New School</a>
 
-
+        </div>
+      </div>
     </nav>
+
+      <!--
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="{% url 'homepage' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'schoollist' %}">Schools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'admin:index' %}">Django Admin</a>
+        </li>
+      </ul>
+    </nav> -->
+    <br>
+
     <div class="container">
       {% block body_block %}
       {% endblock %}

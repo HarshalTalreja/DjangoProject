@@ -1,11 +1,13 @@
 {% extends 'basic_app/base.html' %}
 
-{% body body_block %}
-
-<h1>Welcome to a list of all the schools!</h1>
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>School List Page!</h1>
+  </div>
+  <h4>Below is the list of schools present:</h4>
   <ol>
     {% for school in school_list %}
-      <h2><li>{{school.name}}</li></h2>
+      <p><li><a href="{% url 'schooldetail' school.id %}">{{school.name}}</a></li></p>
     {% endfor %}
   </ol>
 
